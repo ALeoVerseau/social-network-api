@@ -1,0 +1,2 @@
+const { Thots } = require("../models");
+
