@@ -13,7 +13,7 @@ module.exports = {
     // get one user by id
     async getSingleUser (req, res) {
         try {
-            const user = await User.findOne({id: req.params.userId}).select("-__v");
+            const user = await User.findOne({_id: req.params.userId}).select("-__v");
             
             if (!user) {
                 return res.status(404).json({message: "Invalid User :C"})

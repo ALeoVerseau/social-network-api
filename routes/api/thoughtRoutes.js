@@ -11,13 +11,12 @@ const {
 // localhost:3001/api/thoughts
 router.route("/")
     .get(getThoughts)
-    .get(createThought);
+    .post(createThought);
 
 // localhost:3001/api/thoughts/:thoughtId
 router.route("/:thoughtId")
     .get(getSingleThought)
-    .get(updateThought)
-    .delete(deleteThought);
+    .put(updateThought);
 
 // localhost:3001/api/thoughts/:thoughtId/reactions
 router.route("/:thoughtId/reactions")
